@@ -1,1 +1,1 @@
-# HackBio-Genomics-Workshop
+# HackBio-Genomics-Workshop (team-darwin)
