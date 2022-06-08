@@ -1,4 +1,4 @@
-# HackBio-Genomics-Workshop (team-darwin)
+# HackBio-Genomics-Workshop 
 
 All the tasks assigned in the training can be found here
 
