@@ -67,13 +67,13 @@ wget https://github.com/josoga2/yt-dataset/blob/main/dataset/raw_reads/Drysdale_
 
 cd ..
 
-#Create a folder called output
+
 mkdir output && cd output
 mkdir QC_reports
 
 cd \raw_reads
 
-#Implement fastqc for all fastq files
+#Implement fastqc for all fastq files and save the output
 fastqc raw_reads/*.fastq.gz -o output/QC_reports
 
 cd ..
@@ -97,7 +97,7 @@ mv multiqc_report.html \output
 
 cd \raw_reads
 
-#Implement fastp
+#Implement fastp (trimming sequence adapters)
 #download trim.sh
 wget https://raw.githubusercontent.com/josoga2/yt-dataset/main/dataset/trim.sh
 
