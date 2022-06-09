@@ -7,8 +7,8 @@ echo "${x} ${y}"
 
 # Write a version where the strings are printed on the same line and a version where the strings are printed on different lines
 
-x="Aswani"
-y="Renuka"
+x="Ankita"
+y="Murmu"
 printf "${x}\n ${y}\n"
 
 # Bash story one
@@ -45,7 +45,7 @@ wc -l lane8_DD_P4_TTAGGC_L008_R1.fastq.gz
 awk 'END{print NR-(ARGC-1)}' * > new_file.txt
 
 
-# GitHub
+# GitHub repos created by the team
 
 echo "https://github.com/ankitamurmu/HackBio-Genomics-Workshop"
 echo "https://github.com/adeolaakintola/hackbiotask"
