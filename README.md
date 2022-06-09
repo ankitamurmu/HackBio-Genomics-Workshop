@@ -1,6 +1,6 @@
 # HackBio-Genomics-Workshop 
 
-All the tasks assigned in the training can be found here
+Find all the tasks related to the taining!
 
 STAGE ZERO : Used BASH to carry out basic and introductory tasks
 
