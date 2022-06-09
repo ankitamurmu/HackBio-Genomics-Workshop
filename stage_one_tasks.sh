@@ -44,7 +44,6 @@ conda install -c conda-forge multiqc
 conda install -c bioconda fastp
 conda install -c bioconda samtools
 conda install -c bioconda bwa
-conda install -c bioconda bbmap
 #conda install -c bioconda fastx_toolkit
 
 cd \stage_one
