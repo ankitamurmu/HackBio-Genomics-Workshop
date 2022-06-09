@@ -2,10 +2,10 @@
 
 Find all the tasks related to the taining!
 
-# STAGE ZERO 
+## STAGE ZERO 
 * Used BASH to carry out basic and introductory tasks
 
-# STAGE ONE
+## STAGE ONE
 * Worked with simple biological datasets
 * Softwares used:
 1. fastqc (quality control)
