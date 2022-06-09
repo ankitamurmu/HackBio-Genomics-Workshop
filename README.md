@@ -5,6 +5,7 @@ Find all the tasks related to the taining!
 STAGE ZERO : Used BASH to carry out basic and introductory tasks
 
 STAGE ONE: Worked with simple biological datasets
+
 Softwares used:
 1. fastqc (quality control)
 2. multiQC (assembling quality control reports)
@@ -14,6 +15,5 @@ Softwares used:
 6. bwa (assembling genomes)
 7. samtools (manipulating sam/bam/cram files) 
 
-*All the results are stored in output file
-*The sample datasets are in the raw_reads file
+Note: All the results are stored in output file and the sample datasets are in the raw_reads file
 
