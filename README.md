@@ -12,7 +12,6 @@ Find all the tasks related to the training!
 2. multiQC (assembling quality control reports)
 3. fastp (trimming sequence adapters) 
 4. fastx (fastq_to_fasta : convert fastq to fasta) 
-(optional)
 6. bwa (assembling genomes)
 7. samtools (manipulating sam/bam/cram files) 
 
