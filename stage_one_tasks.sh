@@ -11,7 +11,6 @@ wget https://raw.githubusercontent.com/HackBio-Internship/wale-home-tasks/main/D
 #Count the number of sequences in DNA.fa
 grep ">" DNA.fa | wc -l
 
-
 #Write a one-line command in Bash to get the total A, T, G & C counts for all the sequences in the file above
 grep -Eo 'A|T|G|C' DNA.fa | sort | uniq -c | awk '{print $2": "$1}'
 
@@ -48,10 +47,9 @@ conda install -c bioconda bwa
 
 cd \stage_one
 
-#make folder for downloading datasets
-mkdir raw_reads
+mkdir raw_reads && cd raw_reads
 
-#Downloads some sample datasets
+#Downloads sample datasets
 wget https://github.com/josoga2/yt-dataset/blob/main/dataset/raw_reads/ACBarrie_R1.fastq.gz?raw=true/ -O ACBarrie_R1.fastq.gz
 wget https://github.com/josoga2/yt-dataset/blob/main/dataset/raw_reads/ACBarrie_R2.fastq.gz?raw=true/ -O ACBarrie_R2.fastq.gz
 wget https://github.com/josoga2/yt-dataset/blob/main/dataset/raw_reads/Alsen_R1.fastq.gz?raw=true/ -O Alsen_R1.fastq.gz
@@ -84,7 +82,8 @@ mv multiqc_report.html \output
 cd \raw_reads
 
 #Implement fastp (trimming sequence adapters)
-#download trim.sh
+
+#download trim.sh script for implementing fastp for all sequences
 wget https://raw.githubusercontent.com/josoga2/yt-dataset/main/dataset/trim.sh
 
 #run
@@ -145,7 +144,7 @@ samtools view sorted_Drysdale.bam | head -n 5
 
 cd \raw_reads
  
-#move alignment_map and repaired folders output folder
+#move alignment_map and repaired folders to output folder
 mv -v alignment_map/ ..
 mv -v repaired/ ..
 cd ..
