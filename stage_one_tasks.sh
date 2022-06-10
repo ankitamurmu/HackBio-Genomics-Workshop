@@ -144,9 +144,8 @@ samtools view sorted_Chara.bam | head -n 5
 samtools view sorted_Drysdale.bam | head -n 5
 
 cd \raw_reads
-
-#move remaining results to output folder
-#move alignment_map and repaired folders
+ 
+#move alignment_map and repaired folders output folder
 mv -v alignment_map/ ..
 mv -v repaired/ ..
 cd ..
@@ -178,3 +177,10 @@ fastq_to_fasta -i Chara_R1.fastq -o Chara_R1.fasta
 fastq_to_fasta -i Chara_R2.fastq -o Chara_R2.fasta
 fastq_to_fasta -i Drysdale_R1.fastq -o Drysdale_R1.fasta
 fastq_to_fasta -i Drysdale_R2.fastq -o Drysdale_R2.fasta
+
+cd ../..
+
+#move trimmed_reads and fasta_converted folders to output folder
+mv -v trimmed_reads/ ..
+cd ..
+mv -v trimmed_reads/ output/
