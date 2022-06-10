@@ -3,7 +3,7 @@
 
 #To count the number of sequences in DNA.fa (https://raw.githubusercontent.com/HackBio-Internship/wale-home-tasks/main/DNA.fa)
 
-mkdir stage_one
+mkdir stage_one && cd stage_one
 
 #Download DNA.fa
 wget https://raw.githubusercontent.com/HackBio-Internship/wale-home-tasks/main/DNA.fa
@@ -14,7 +14,7 @@ grep ">" DNA.fa | wc -l
 #Write a one-line command in Bash to get the total A, T, G & C counts for all the sequences in the file above
 grep -Eo 'A|T|G|C' DNA.fa | sort | uniq -c | awk '{print $2": "$1}'
 
-cd
+cd ..
 
 #Download miniconda for setting up environment on the terminal
 wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh
