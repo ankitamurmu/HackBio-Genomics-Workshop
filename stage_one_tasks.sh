@@ -41,16 +41,15 @@ source ~/.bashrc
 #download and install softwares
 conda install -c bioconda fastqc
 conda install -c conda-forge multiqc
+conda install -c bioconda fastx_toolkit
 conda install -c bioconda fastp
 conda install -c bioconda samtools
 conda install -c bioconda bwa
-#conda install -c bioconda fastx_toolkit
 
 cd \stage_one
 
 #make folder for downloading datasets
 mkdir raw_reads
-
 
 #Downloads some sample datasets
 wget https://github.com/josoga2/yt-dataset/blob/main/dataset/raw_reads/ACBarrie_R1.fastq.gz?raw=true/ -O ACBarrie_R1.fastq.gz
@@ -65,7 +64,6 @@ wget https://github.com/josoga2/yt-dataset/blob/main/dataset/raw_reads/Drysdale_
 wget https://github.com/josoga2/yt-dataset/blob/main/dataset/raw_reads/Drysdale_R2.fastq.gz?raw=true/ -O Drysdale_R2.fastq.gz
 
 cd ..
-
 
 mkdir output && cd output
 mkdir QC_reports
@@ -109,7 +107,6 @@ wget https://raw.githubusercontent.com/josoga2/yt-dataset/main/dataset/aligner.s
 
 #run
 bash aligner.sh
-
 
 #samtools (manipulating sam/bam/cram files)
 
