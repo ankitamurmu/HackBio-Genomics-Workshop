@@ -83,17 +83,6 @@ multiqc output/QC_reports
 #move multiqc html report
 mv multiqc_report.html \output
 
-#Implement fastk (fastq_to_fasta : convert fastq to fasta)
-#convert all fastq.gz to fastq by keeping the original gz files
-#gunzip -k *.gz
-#convert fastq to fasta using fastx
-#fastq_to_fasta -i ACBarrie_R1.fastq -o ACBarrie_R1.fasta
-#fastq_to_fasta -i ACBarrie_R2.fastq -o ACBarrie_R2.fasta
-#fastq_to_fasta -i Alsen_R1.fastq -o Alsen_R1.fasta
-#fastq_to_fasta -i Alsen_R2.fastq -o Alsen_R2.fasta
-#fastq_to_fasta -i Baxter_R1.fastq -o Baxter_R1.fasta
-#fastq_to_fasta -i Baxter_R2.fastq -o Baxter_R2.fasta
-
 cd \raw_reads
 
 #Implement fastp (trimming sequence adapters)
@@ -157,6 +146,8 @@ samtools view sorted_Baxter.bam | head -n 5
 samtools view sorted_Chara.bam | head -n 5
 samtools view sorted_Drysdale.bam | head -n 5
 
+cd \raw_reads
+
 #move remaining results to output folder
 #move alignment_map and repaired folders
 mv -v alignment_map/ ..
@@ -165,4 +156,28 @@ cd ..
 mv -v alignment_map/ output/
 mv -v repaired/ output/
 
+cd \trimmed_reads
 
+#Implement fastk (fastq_to_fasta : convert fastq to fasta)
+
+mkdir fasta_converted
+
+#convert all fastq.gz to fastq by keeping the original gz files
+gunzip -k *.gz
+
+#move all fastq files to fasta_converted folder
+mv *.fastq fasta_converted
+
+cd \fasta_converted
+
+#convert fastq to fasta using fastx
+fastq_to_fasta -i ACBarrie_R1.fastq -o ACBarrie_R1.fasta
+fastq_to_fasta -i ACBarrie_R2.fastq -o ACBarrie_R2.fasta
+fastq_to_fasta -i Alsen_R1.fastq -o Alsen_R1.fasta
+fastq_to_fasta -i Alsen_R2.fastq -o Alsen_R2.fasta
+fastq_to_fasta -i Baxter_R1.fastq -o Baxter_R1.fasta
+fastq_to_fasta -i Baxter_R2.fastq -o Baxter_R2.fasta
+fastq_to_fasta -i Chara_R1.fastq -o Chara_R1.fasta
+fastq_to_fasta -i Chara_R2.fastq -o Chara_R2.fasta
+fastq_to_fasta -i Drysdale_R1.fastq -o Drysdale_R1.fasta
+fastq_to_fasta -i Drysdale_R2.fastq -o Drysdale_R2.fasta
