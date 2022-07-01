@@ -1,0 +1,5 @@
+Sample	FastQC_mqc-generalstats-fastqc-percent_duplicates	FastQC_mqc-generalstats-fastqc-percent_gc	FastQC_mqc-generalstats-fastqc-avg_sequence_length	FastQC_mqc-generalstats-fastqc-percent_fails	FastQC_mqc-generalstats-fastqc-total_sequences
+SLGFSK-N_231335_r1_chr5_12_17	26.359279107496604	49.0	101.0	0.0	10602766.0
+SLGFSK-N_231335_r2_chr5_12_17	25.316157788344498	49.0	101.0	0.0	10602766.0
+SLGFSK-T_231336_r1_chr5_12_17	42.951227021437724	53.0	101.0	9.090909090909092	16293448.0
+SLGFSK-T_231336_r2_chr5_12_17	41.866810876060015	53.0	101.0	9.090909090909092	16293448.0

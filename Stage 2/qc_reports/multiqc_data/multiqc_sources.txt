@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SLGFSK-T_231336_r1_chr5_12_17	/home/ankitamurmu111/stage_two/raw_read/qc_reports/SLGFSK-T_231336_r1_chr5_12_17_fastqc.zip
+FastQC	all_sections	SLGFSK-T_231336_r2_chr5_12_17	/home/ankitamurmu111/stage_two/raw_read/qc_reports/SLGFSK-T_231336_r2_chr5_12_17_fastqc.zip
+FastQC	all_sections	SLGFSK-N_231335_r1_chr5_12_17	/home/ankitamurmu111/stage_two/raw_read/qc_reports/SLGFSK-N_231335_r1_chr5_12_17_fastqc.zip
+FastQC	all_sections	SLGFSK-N_231335_r2_chr5_12_17	/home/ankitamurmu111/stage_two/raw_read/qc_reports/SLGFSK-N_231335_r2_chr5_12_17_fastqc.zip
